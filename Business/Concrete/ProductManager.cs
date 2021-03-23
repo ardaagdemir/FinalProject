@@ -7,6 +7,7 @@ using System.Text;
 
 namespace Business.Concrete
 {
+    //Yapı hiç değişmedi, burada entityFrameWork e bir bağlılık söz konusu değil
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
