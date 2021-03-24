@@ -11,15 +11,15 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //sql server a bağlanmak için gerekli metot
+            //sql server connection method
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=Northwind; Trusted_Connection=true"); //trusted connection: kullanıcı adı ve şifre vermeden giriş
-                                                                                                                   //parantez içinde yazılı olan string kısmına connection string denir.
+                                                                            //connection string 
         }
 
         //Product classını Products tablosuna eşle
         public DbSet<Product> Products { get; set; }
 
-        //Category classını Categories tablosuna eşle
+        
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Customer> Customers { get; set; }

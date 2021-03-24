@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
         public void Add(Product entity)
         {
             //using = IDisposable pattern implementation of C#
-            //using bloğu -- C#' a özel bir yapıdır, using içerisine yazılan nesneler using bitince bellekten atılır, bu da kod un daha performaslı çalışmasını sağlar
+            //using bloğu -- C#' a özel bir yapıdır, using içerisine yazılan nesneler using bitince bellekten atılır
             using (NorthwindContext context = new NorthwindContext())
             {
                 var addedEntity = context.Entry(entity); //referansı yakala, ekle, kaydet
