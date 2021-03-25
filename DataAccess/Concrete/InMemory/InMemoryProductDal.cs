@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,7 @@ namespace DataAccess.Concrete.InMemory
             return _products;
         }
 
-        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
+        public List<Product> Get(Expression<Func<Product, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
@@ -72,6 +73,11 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;
             productToUpdate.UnitsInStock = product.UnitsInStock;
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            throw new NotImplementedException();
         }
     }
 }
