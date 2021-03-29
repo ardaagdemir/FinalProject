@@ -11,7 +11,7 @@ namespace Core.DataAccess
     public interface IEntityRepository<T> where T:class, IEntity, new() 
     {
         //Bir listeden bir elemanı seçebilmek için yazılan kod satırıdır. Filtreleme yapılmasını sağlar.
-        List<T> Get(Expression<Func<T, bool>> filter=null); 
+        List<T> GetAll(Expression<Func<T, bool>> filter=null); 
         T GetT(Expression<Func<T, bool>> filter = null);
         void Add(T entity);
         void Update(T entity);

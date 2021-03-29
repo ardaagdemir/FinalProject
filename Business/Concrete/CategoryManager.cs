@@ -18,12 +18,12 @@ namespace Business.Concrete
 
         public List<Category> GetAll()
         {
-            return _categoryDal.Get();   
+            return _categoryDal.GetAll();   
         }
 
         public List<Category> GetById(int categoryId)
         {
-            return _categoryDal.Get(c=> c.CategoryId == categoryId);
+            return _categoryDal.GetAll(c=> c.CategoryId == categoryId);
         }
     }
 }
