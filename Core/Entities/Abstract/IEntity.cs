@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities
+namespace Core.Apstract
 {
     //Entity' yi implement eden class bir veritabı tablosudur.
     public interface IEntity
