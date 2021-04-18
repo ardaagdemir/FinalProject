@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -17,7 +18,6 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    //Yapı hiç değişmedi, burada entityFramework e bir bağlılık söz konusu değil
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
@@ -30,6 +30,7 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+        [SecuredOperation("product.add, admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
